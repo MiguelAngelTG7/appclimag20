@@ -41,7 +41,7 @@ function showError(error){
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
 
-// desplegar el clima desde la API
+// Solicitar y Desplegar el clima desde la API
 function getWeather(latitude, longitude){
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
@@ -70,12 +70,12 @@ function displayWeather(){
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-// conversion de °C a °F 
+// Convertir de °C a °F 
 function celsiusToFahrenheit(temperature){
     return (temperature * 9/5) + 32;
 }
 
-// When el usurio hace click en el elemento temperatura
+// Cuando el usurio hace click en el elemento temperatura
 tempElement.addEventListener("click", function(){
     if(weather.temperature.value === undefined) return;
     
